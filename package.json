@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/MiguelFs86/unir-ingenieria-software-avanzada-actividad-4/issues"
   },
-  "homepage": "https://github.com/MiguelFs86/unir-ingenieria-software-avanzada-actividad-4#readme"
+  "homepage": "https://github.com/MiguelFs86/unir-ingenieria-software-avanzada-actividad-4#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
 }
