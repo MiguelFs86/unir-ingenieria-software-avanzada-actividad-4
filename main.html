@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./main.css">
-    <title>CalculadorApp</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+  <title>CalculadorApp</title>
 </head>
+
 <body>
-    <script src="./main.js"></script>
-    <h1>CalculadorApp</h1>
+  <script src="./main.js"></script>
+  <div class="contenedor-calculadora">
+    <div class="pantalla-calculadora" name="pantalla-calculadora">
+      <input class="" id="pantalla" name="pantalla" readonly="true" />
+    </div>
+    <div class="teclado-calculadora">
+      <div class="numero-calculadora" onclick="entradaNumero('1')">1</div>
+      <div class="numero-calculadora" onclick="entradaNumero('2')">2</div>
+      <div class="numero-calculadora" onclick="entradaNumero('3')">3</div>
+      <div class="numero-calculadora" onclick="operacion('/')">/</div>
+      <div class="numero-calculadora" onclick="entradaNumero('4')">4</div>
+      <div class="numero-calculadora" onclick="entradaNumero('5')">5</div>
+      <div class="numero-calculadora" onclick="entradaNumero('6')">6</div>
+      <div class="numero-calculadora" onclick="operacion('*')">*</div>
+      <div class="numero-calculadora" onclick="entradaNumero('7')">7</div>
+      <div class="numero-calculadora" onclick="entradaNumero('8')">8</div>
+      <div class="numero-calculadora" onclick="entradaNumero('9')">9</div>
+      <div class="numero-calculadora" onclick="operacion('-')">-</div>
+      <div class="numero-calculadora" onclick="entradaNumero(',')">,</div>
+      <div class="numero-calculadora" onclick="entradaNumero('0')">0</div>
+      <div class="numero-calculadora boton-limpiar" onclick="limpiarTodo()">CE</div>
+      <div class="numero-calculadora" onclick="operacion('+')">+</div>
+      <div class="numero-calculadora boton-igual" onclick="realizarOperacion()">=</div>
+      <div class="numero-calculadora" onclick="operacion('sqrt')">sqrt</div>
+    </div>
+  </div>
 </body>
+
 </html>
