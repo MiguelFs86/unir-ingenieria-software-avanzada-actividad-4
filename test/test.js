@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 const calculadora = require('../main');
 
 describe('Comprobación el resultado de las operaciones de la calculadora', () => {
@@ -16,7 +17,7 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       assert.typeOf(numero1, "Number", "El número debe de ser un entero");
       assert.typeOf(numero2, "Number", "El número debe de ser un entero");
       const suma = calculadora.suma(numero1, numero2);
-      assert.typeOf(numero2, "Number", "El resultado de la suma debe ser un número");
+      assert.typeOf(suma, "Number", "El resultado de la suma debe ser un número");
       assert.strictEqual(resultadoEsperado, suma);
   });
 
@@ -27,8 +28,8 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       assert.typeOf(numero1, "Number", "El número debe de ser un entero");
       assert.typeOf(numero2, "Number", "El número debe de ser un entero");
       const resta = calculadora.resta(numero1, numero2);
-      assert.typeOf(numero2, "Number", "El resultado de la resta debe ser un número");
-      assert.strictEqual(resultadoEsperado, suma);
+      assert.typeOf(resta, "Number", "El resultado de la resta debe ser un número");
+      assert.strictEqual(resultadoEsperado, resta);
   });
 
   it('Devuelve el producto de 2 numeros', () => {
@@ -38,7 +39,7 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       assert.typeOf(numero1, "Number", "El número debe de ser un entero");
       assert.typeOf(numero2, "Number", "El número debe de ser un entero");
       const producto = calculadora.multiplicacion(numero1, numero2);
-      assert.typeOf(numero2, "Number", "El resultado de la multiplicacion debe ser un número");
+      assert.typeOf(producto, "Number", "El resultado de la multiplicacion debe ser un número");
       assert.strictEqual(resultadoEsperado, producto);
   });
 
@@ -49,8 +50,19 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       assert.typeOf(numero1, "Number", "El número debe de ser un entero");
       assert.typeOf(numero2, "Number", "El número debe de ser un entero");
       assert.notEqual(numero2, 0, "El divisor de la operación no puede ser 0")
-      const division = calculadora.resta(numero1, numero2);
-      assert.typeOf(numero2, "Number", "El resultado de la división debe ser un número");
+      const division = calculadora.division(numero1, numero2);
+      assert.typeOf(division, "Number", "El resultado de la división debe ser un número");
       assert.strictEqual(resultadoEsperado, division);
   });
+
+  it('Devuelve la raiz cuadrada de un numero', () => {
+    const resultadoEsperado = 10;
+    const numero = 100;
+    expect(numero).to.be.at.least(0, "El número para calcular la raiz cuadrada debe ser positivo");
+    assert.typeOf(numero, "Number", "El número debe de ser un entero");
+    const raizCuadrada = calculadora.raizCuadrada(numero);
+    assert.typeOf(raizCuadrada, "Number", "El resultado de la división debe ser un número");
+    assert.strictEqual(resultadoEsperado, raizCuadrada);
+  });
+
 });

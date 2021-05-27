@@ -79,4 +79,8 @@ const division = (a, b) => {
   return Number(a) / Number(b);
 };
 
-module.exports = { suma, resta, multiplicacion, division };
+const raizCuadrada = (a) => {
+  return Math.sqrt(Number(a));
+};
+
+module.exports = { suma, resta, multiplicacion, division, raizCuadrada };
