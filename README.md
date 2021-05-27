@@ -10,4 +10,20 @@ Además, se ha incluido un fichero de pruebas con el podremos realizar tests sob
 
 ## Ejecución
 
-Para ejecutar la aplicación, abrir el fichero main.html en el navegador
+Para ejecutar la aplicación, bastará con ejecutar el siguiente comando dentro de la carpeta del proyecto:
+
+```bash
+npm install
+```
+
+Una vez hecho esto, abrir el fichero main.html en un navegador.
+
+## Tests
+
+En el fichero test.js, dentro del directorio test, encontramos una serie de tests para probar el funcionamiento de la función suma. Para ejecutar estos test, se realizará mediante los paquetes Mocha.js (https://mochajs.org/) y Chai (https://www.chaijs.com/)
+
+El comando para ejecutar las pruebas es el siguiente
+
+```bash
+npm test
+```
