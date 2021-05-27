@@ -62,3 +62,9 @@ const limpiarTodo = () => {
   resultado = 0;
   document.getElementById('pantalla').value = '';
 };
+
+const suma = (a, b) => {
+  return Number(a) + Number(b);
+};
+
+module.exports = { suma };
