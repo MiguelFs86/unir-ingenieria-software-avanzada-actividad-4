@@ -65,4 +65,22 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
     assert.strictEqual(resultadoEsperado, raizCuadrada);
   });
 
+  it('Devuelve el resultado de concatenar varias operaciones', () => {
+    const resultadoEsperado = 6;
+    const numero1 = 12;
+    const numero2 = 6;
+    const numero3 = 8;
+    const numero4 = 2;
+    assert.typeOf(numero1, "Number", "El número debe de ser un entero");
+    assert.typeOf(numero2, "Number", "El número debe de ser un entero");
+    assert.typeOf(numero3, "Number", "El número debe de ser un entero");
+    assert.typeOf(numero4, "Number", "El número debe de ser un entero");
+    /* sqrt( 12 + (6 * (8 / 2 ) ) ) */
+    const operaciones = calculadora.raizCuadrada(
+        calculadora.suma(numero1, calculadora.multiplicacion(numero2, calculadora.division(numero3, numero4)))
+    );
+    assert.typeOf(operaciones, "Number", "El resultado de la operación debe ser un número");
+    assert.strictEqual(resultadoEsperado, operaciones);
+  });
+
 });
