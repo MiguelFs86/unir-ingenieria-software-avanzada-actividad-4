@@ -30,4 +30,15 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       assert.typeOf(numero2, "Number", "El resultado de la resta debe ser un número");
       assert.strictEqual(resultadoEsperado, suma);
   });
+
+  it('Devuelve el producto de 2 numeros', () => {
+      const resultadoEsperado = 8;
+      const numero1 = 4;
+      const numero2 = 2;
+      assert.typeOf(numero1, "Number", "El número debe de ser un entero");
+      assert.typeOf(numero2, "Number", "El número debe de ser un entero");
+      const suma = calculadora.resta(numero1, numero2);
+      assert.typeOf(numero2, "Number", "El resultado de la multiplicacion debe ser un número");
+      assert.strictEqual(resultadoEsperado, suma);
+  });
 });

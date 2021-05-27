@@ -20,7 +20,7 @@ Una vez hecho esto, abrir el fichero main.html en un navegador.
 
 ## Tests
 
-En el fichero test.js, dentro del directorio test, encontramos una serie de tests para probar el funcionamiento de las funciones suma y resta. Para ejecutar estos test, se realizará mediante los paquetes Mocha.js (https://mochajs.org/) y Chai (https://www.chaijs.com/)
+En el fichero test.js, dentro del directorio test, encontramos una serie de tests para probar el funcionamiento de las funciones suma, resta y multiplicación. Para ejecutar estos test, se realizará mediante los paquetes Mocha.js (https://mochajs.org/) y Chai (https://www.chaijs.com/)
 
 El comando para ejecutar las pruebas es el siguiente
 

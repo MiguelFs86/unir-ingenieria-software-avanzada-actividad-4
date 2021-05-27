@@ -71,4 +71,8 @@ const resta = (a, b) => {
   return Number(a) - Number(b);
 };
 
+const multiplicacion = (a, b) => {
+  return Number(a) * Number(b);
+};
+
 module.exports = { suma, resta };
