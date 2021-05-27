@@ -75,4 +75,8 @@ const multiplicacion = (a, b) => {
   return Number(a) * Number(b);
 };
 
-module.exports = { suma, resta };
+const division = (a, b) => {
+  return Number(a) / Number(b);
+};
+
+module.exports = { suma, resta, multiplicacion, division };

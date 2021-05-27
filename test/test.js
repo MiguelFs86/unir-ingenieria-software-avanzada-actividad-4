@@ -26,7 +26,7 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       const numero2 = 6;
       assert.typeOf(numero1, "Number", "El número debe de ser un entero");
       assert.typeOf(numero2, "Number", "El número debe de ser un entero");
-      const suma = calculadora.resta(numero1, numero2);
+      const resta = calculadora.resta(numero1, numero2);
       assert.typeOf(numero2, "Number", "El resultado de la resta debe ser un número");
       assert.strictEqual(resultadoEsperado, suma);
   });
@@ -37,8 +37,20 @@ describe('Comprobación el resultado de las operaciones de la calculadora', () =
       const numero2 = 2;
       assert.typeOf(numero1, "Number", "El número debe de ser un entero");
       assert.typeOf(numero2, "Number", "El número debe de ser un entero");
-      const suma = calculadora.resta(numero1, numero2);
+      const producto = calculadora.multiplicacion(numero1, numero2);
       assert.typeOf(numero2, "Number", "El resultado de la multiplicacion debe ser un número");
-      assert.strictEqual(resultadoEsperado, suma);
+      assert.strictEqual(resultadoEsperado, producto);
+  });
+
+  it('Devuelve la división de 2 numeros', () => {
+      const resultadoEsperado = 4;
+      const numero1 = 20;
+      const numero2 = 5;
+      assert.typeOf(numero1, "Number", "El número debe de ser un entero");
+      assert.typeOf(numero2, "Number", "El número debe de ser un entero");
+      assert.notEqual(numero2, 0, "El divisor de la operación no puede ser 0")
+      const division = calculadora.resta(numero1, numero2);
+      assert.typeOf(numero2, "Number", "El resultado de la división debe ser un número");
+      assert.strictEqual(resultadoEsperado, division);
   });
 });
